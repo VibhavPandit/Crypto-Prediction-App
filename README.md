@@ -7,9 +7,13 @@ The Crypto Prediction App is an advanced tool designed to assist users in making
 To set up the application, please follow these steps:
 
 1. **Download and Setup:**
+   - Ensure you have installed all the necessary libararies. To be sure run the below command
+     ```
+     pip install flask pandas scikit-learn mysql-connector-python requests datetime timedelta
+     ```
    - Download the application files without altering their locations to maintain the file structure integrity.
 
-2. **Database Configuration:**
+3. **Database Configuration:**
    - Set up a MySQL server.
    - Provide the necessary details such as the host name, user name, password, and database name in the application's configuration settings. Make these changes in the database.py file like this
      ```
@@ -22,19 +26,19 @@ To set up the application, please follow these steps:
      
      ```
 
-3. **Running the Application:**
+4. **Running the Application:**
    - Launch the Flask application `stocks.py` by executing the command:
      ```
      python stocks.py
      ```
    - This initiates the server and hosts the application locally.
 
-4. **Accessing the Web Interface:**
+5. **Accessing the Web Interface:**
    - Navigate to the provided local address in your web browser.
    - The landing page will prompt you to select a cryptocurrency.
    - After selection, the app will provide a prediction and recommend whether to "BUY" or "SELL" the selected coin.
   
-5. **Building Docker Files**
+6. **Building Docker Files**
    - Make sure you have DockerHub installed in your system.
    - There is a Docker file called ModelDockerfile.txt
    - Open cmd and locate to this project file directory in your local system.
@@ -45,7 +49,7 @@ To set up the application, please follow these steps:
      ```
      docker run -p 5000:5000 application-name
      ```
-6. **Kubernetes**
+7. **Kubernetes**
    - There are two .yaml files called deployment.yaml and service.yaml
    - Execute the below codes to get the kubernetes up and running
      ```
