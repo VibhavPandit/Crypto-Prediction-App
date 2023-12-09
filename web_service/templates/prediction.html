@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='prediction-style.css') }}">
+</head>
+<body class="{{ 'buy' if result.signal == 'BUY' else 'sell' }}">
+    <div class="content">
+        <h1>Prediction Details</h1>
+        <p class="details">Symbol: {{ result.symbol }}</p>
+        <p class ="details"> Current Price : {{result.current_price}} </p>
+        <p class="details">Predicted Price: {{ result.predictions[0] }}</p>
+    </div>
+
+    <div>
+        <p class="signal"> <span class="signal-value">{{ result.signal }}</span></p>
+    </div>
+</body>
+</html>

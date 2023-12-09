@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-prediction-app
+  labels:
+    app: crypto-prediction-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: crypto-prediction-app
+  template:
+    metadata:
+      labels:
+        app: crypto-prediction-app
+    spec:
+      containers:
+      - name: crypto-prediction-app
+        image: vibhav958/crypto_prediction_vibhav:latest 
+        ports:
+        - containerPort: 5000

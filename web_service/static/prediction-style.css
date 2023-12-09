@@ -1,0 +1,52 @@
+body.buy {
+    background: linear-gradient(to right, #56ab2f, #a8e063); 
+}
+
+body.sell {
+    background: linear-gradient(to right, #ff512f, #dd2476); 
+}
+
+.signal-value{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #757575; 
+}
+.content {
+    max-width: 400px;
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.details {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.signal-value {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation-name: zoomInOut;
+    animation-duration: 2s; /* Duration of the animation */
+    animation-timing-function: ease-in-out; /* Makes the movement smooth */
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger size */
+    }
+}
