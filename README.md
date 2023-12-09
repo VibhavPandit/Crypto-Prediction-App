@@ -33,6 +33,30 @@ To set up the application, please follow these steps:
    - Navigate to the provided local address in your web browser.
    - The landing page will prompt you to select a cryptocurrency.
    - After selection, the app will provide a prediction and recommend whether to "BUY" or "SELL" the selected coin.
+  
+5. **Building Docker Files**
+   - Make sure you have DockerHub installed in your system.
+   - There is a Docker file called ModelDockerfile.txt
+   - Open cmd and locate to this project file directory in your local system.
+   - Execute these codes to create the docker files.
+     ```
+     docker build -t application-name-of-your-choice -f ModelDockerfile.txt .
+     ```
+     ```
+     docker run -p 5000:5000 application-name
+     ```
+6. **Kubernetes**
+   - There are two .yaml files called deployment.yaml and service.yaml
+   - Execute the below codes to get the kubernetes up and running
+     ```
+     kubectl apply -f deployment.yaml
+     kubectl get deployments
+     ```
+
+     ```
+     kubectl apply -f service.yaml
+     kubectl get services
+     ```
 
 ## Usage Limitations
 - Please note that the application allows a maximum of 100 requests per user.
